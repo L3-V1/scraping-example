@@ -1,0 +1,23 @@
+{
+  "name": "book-scraper",
+  "version": "1.0.0",
+  "description": "Bookstore Web Scraper",
+  "main": "index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev":"nodemon src/index.js",
+    "api":"node src/scraper.js"
+  },
+  "keywords": [],
+  "author": "Levi Moraes",
+  "license": "ISC",
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "node-fetch": "^2.6.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.6"
+  }
+}

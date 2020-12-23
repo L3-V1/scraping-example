@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+
+        <title>Book Details</title>
+    </head>
+
+    <body>
+        <header>
+            <div class="jumbotron jumbotron-fluid">
+                <div class="container">
+                    <h1 class="display-4">Book Details</h1>
+
+                    <p class="lead">Web scraping from the website <a href="http://books.toscrape.com/" target="_blank">Books.toscrape.com</a></p>
+                </div>
+            </div>
+        </header>
+
+        <main id="app">
+            <div class="container">
+                <h1 v-if="loading" class="text-center"><i>Loading...</i></h1>
+                
+                <div v-if="!loading && book" class="card">
+                    <div class="card-header">
+                        <h5 class="card-title">Title: {{book.title}}</h5>
+                    </div>
+
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-3">
+                                <img v-bind:src="book.image" v-bind:alt="book.title" class="card-img-top">
+                            </div>
+
+                            <div class="col-9">
+                                <ul>
+                                    <li><b>UPC:</b> {{book.upc}}</li>
+
+                                    <li><b>Price:</b> {{book.price}}</li>
+        
+                                    <li><b>Availability:</b> {{book.state}}</li>
+                                </ul>
+
+                                <b>Summary:</b>
+                            
+                                <p class="text-justify">{{book.summary}}</p>
+                            </div> 
+                        </div>
+                    </div>
+
+                    <div class="card-footer">
+                        <p class="card-text"><b>Type:</b> {{book.type}} | <b>Tax:</b> {{book.tax}} | <b>Reviews:</b> {{book.reviews}}</p>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <script src="js/jquery-3.4.1.min.js"></script>
+
+        <script src="js/bootstrap.min.js"></script>
+
+        <script src="js/vue.min.js"></script>
+
+        <script src="src/book.js"></script>
+    </body>
+</html>
