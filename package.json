@@ -1,7 +1,7 @@
 {
-  "name": "book-scraper",
+  "name": "scraping-example",
   "version": "1.0.0",
-  "description": "Bookstore Web Scraper",
+  "description": "Web Scraping App Example",
   "main": "index.js",
   "scripts": {
     "start": "node src/index.js",
